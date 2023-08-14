@@ -1,38 +1,115 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 95vh;
+}
+.Input {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ffccff;
+  border-radius: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.Input input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Input button {
+  padding: 8px 15px;
+  background-color: #ff66a3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Input button:hover {
+  background-color: #ff3385;
+}
+
+@media screen and (max-width: 768px) {
+  .Input {
+    padding: 5px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Input input {
+    margin-bottom: 5px;
+  }
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.my-message {
+  justify-content: flex-end;
+}
+
+.guest-message {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user-color {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.username {
+  font-weight: bold;
+  margin: 0;
+  color: #ff66a3;
+}
+
+.message-content {
+  background-color: #ffd9e6;
+  color: #333;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.message-content.my-message {
+  background-color: #ff99cc;
+  color: #fff;
+}
+
+.message-content.guest-message {
+  background-color: #ffe6f1;
+}
+
+
+.message-content:hover {
+  background-color: #ffccff;
+}
+
+@media screen and (max-width: 768px) {
+  .message-content {
+    font-size: 14px;
+    padding: 8px;
   }
 }
